@@ -3,3 +3,5 @@
 - link:
     ~/.vim: vim/
     ~/.vimrc: vimrc
+    ~/.gemrc: gemrc
+    ~/.gitconfig: gitconfig
