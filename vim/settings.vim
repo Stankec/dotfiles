@@ -1,9 +1,8 @@
-let mapleader = ","          " map leader key to comma
+" map leader key to comma
+let mapleader = ","
 
-" silent !stty -ixon
-syntax on             " Enable syntax highlighting
-filetype on           " Enable filetype detection
-filetype plugin on    " Enable filetype-specific plugins
+" Enable syntax highlighting
+syntax on
 
 " Set 256 color and colorscheme
 set t_Co=256
@@ -14,18 +13,23 @@ set encoding=utf-8
 set termencoding=utf-8
 
 " Use ag instead of grep
+" Run brew install the_silver_searcher to install ag
 set grepprg=ag\ --nogroup\ --nocolor
 
 " Set tab to 2 spaces, disable wrapping, tweaks
-set shiftwidth=2            " use 2 spaces for indenting
-set nowrap                  " don't wrap text
-set tabstop=2               " Tab counts as 2 spaces
+set shiftwidth=2
+set nowrap
+set tabstop=2
 set expandtab
 set smarttab
 
-set number                  " Show line numbers
-" set relativenumber        " Show relative line numbers
+" Show line numbers
+set number
 
+" Show relative line numbers
+" set relativenumber
+
+" Make backspace behave sane
 set backspace=2
 
 " Show trailing and preceeding whitespace, show tabs
@@ -36,7 +40,7 @@ set listchars+=trail:.
 set listchars+=extends:>
 set listchars+=precedes:<
 
-" Display all possible results with tab completion
+" Display all possible command results with tab completion
 set wildmenu
 set wildmode=longest:full,full
 
@@ -46,16 +50,17 @@ set incsearch
 set ignorecase
 set smartcase
 
-set confirm " Ask to save changes if there are unsaved changes instead of not exiting
+" Ask to save changes if there are unsaved changes instead of not exiting
+set confirm
 
-set mouse=a " Enable mouse in all modes
+" Enable mouse in all modes
+set mouse=a
 
 " Never hide the mouse
 set nomousehide
 
-set laststatus=2 " Always show the status bar
-
-" set colorcolumn=80 " Color columns after 80
+" Always show the status bar
+set laststatus=2
 
 " Position splits logically
 set splitbelow
@@ -63,3 +68,6 @@ set splitright
 
 " Always use the system clibpoard
 " set clipboard=unnamed
+
+" Color columns after 80
+" set colorcolumn=80
