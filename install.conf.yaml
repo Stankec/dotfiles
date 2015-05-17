@@ -1,0 +1,5 @@
+- clean: ['~']
+
+- link:
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
