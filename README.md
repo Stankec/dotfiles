@@ -25,7 +25,7 @@ You are free to modify the repo, however, consulting other people who use the do
 # Customising
 
 The preferred way of customizing dotfiles is to maintain your own fork of this repository. This will ensure that we have a standardized environment
-for new employees, with wich all the current employees should be already familiar and comfortable.
+for new employees, with which all the current employees should be already familiar and comfortable.
 
 # Updating
 
