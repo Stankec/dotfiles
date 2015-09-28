@@ -1,23 +1,18 @@
-[color]
-  ui = true
-  diff = auto
-  status = auto
-  branch = auto
-[format]
-  pretty = "Commit:  %C(yellow)%H%nAuthor:  %C(green)%aN <%aE>%nDate:    (%C(red)%ar%Creset) %ai%nSubject: %s%n%n%b"
-[alias]
-  co = checkout
-  ci = commit
-  st = status
-  br = branch
-  hist = log --color --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-  type = cat-file -t
-  dump = cat-file -p
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
-[push]
-  default = simple
+[user]
+	name = Stanko Krtalić
+	email = stanko.krtalic@gmail.com
 [core]
-  excludesfile = ~/.gitignore_global
-[include]
-  path = ~/.gitconfig.local
+	excludesfile = /Users/Stanko/.gitignore_global
+	editor = atom
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[credential]
+	helper = osxkeychain
+[push]
+	default = simple
+[merge]
+	tool = atom
