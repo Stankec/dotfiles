@@ -1,20 +1,26 @@
 " map leader key to comma
-let mapleader = ","
+let mapleader = "\<Space>"
 
 " Enable syntax highlighting
 syntax on
 
 " Set 256 color and colorscheme
 set t_Co=256
-colorscheme monokai
+colorscheme molokai
 
 " Set encoding
-set encoding=utf-8
+" set encoding=utf-8
 set termencoding=utf-8
 
 " Use ag instead of grep
 " Run brew install the_silver_searcher to install ag
 set grepprg=ag\ --nogroup\ --nocolor
+
+" Turn off swap files
+set noswapfile
+
+" Autoreload files when they change
+set autoread
 
 " Set tab to 2 spaces, disable wrapping, tweaks
 set shiftwidth=2
@@ -66,8 +72,30 @@ set laststatus=2
 set splitbelow
 set splitright
 
+" NERDTree configuration
+let NERDTreeShowHidden=1
+
+" Configure Vim-CTags
+let g:vim_tags_main_file = '.tags'
+
+" Syntastic
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+let g:syntastic_ruby_rubocop_args = "-D -R"
+
+" Neomake
+" let g:neomake_ruby_rubocop_maker = {
+"       \ 'args': '-D -R'
+"       \}
+" autocmd! BufWritePost *.rb Neomake
+
+" Airline
+let g:airline_powerline_fonts = 1
+
 " Always use the system clibpoard
 " set clipboard=unnamed
 
+" ashghajsghjsagjagjsdgsdajghsadjhgdasjgjhsajhgsjgjsagdsjgdjasggdasjgjsagsadjgjsahgjhagsjasdgj
 " Color columns after 80
-" set colorcolumn=80
+set colorcolumn=80
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%80v.\+/

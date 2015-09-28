@@ -26,8 +26,18 @@ map <silent> <leader>hs :split<cr>
 nmap <S-k> [e
 nmap <S-j> ]e
 
+" Toggle Git blame
+nmap <C-b> :Gblame<cr>
+
 " Move between splits w/ C-hjkl
-nmap <silent> <c-h> <c-w>h
-nmap <silent> <c-j> <c-w>j
-nmap <silent> <c-k> <c-w>k
-nmap <silent> <c-l> <c-w>l
+if exists('$TMUX')
+  nnoremap  <silent> <C-h> :TmuxNavigateLeft<CR>
+  nnoremap  <silent> <C-j> :TmuxNavigateDown<CR>
+  nnoremap  <silent> <C-k> :TmuxNavigateUp<CR>
+  nnoremap  <silent> <C-l> :TmuxNavigateRight<CR>
+else
+  nnoremap <silent> <C-h> <C-W>h<CR>
+  nnoremap <silent> <C-j> <C-W>j<CR>
+  nnoremap <silent> <C-k> <C-W>k<CR>
+  nnoremap <silent> <C-l> <C-W>l<CR>
+endif

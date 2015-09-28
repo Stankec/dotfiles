@@ -1,10 +1,10 @@
 - clean: ['~']
 
 - link:
-  ~/.vim: vim/
-  ~/.vimrc: vimrc
-  ~/.gemrc: gemrc
-  ~/.gitconfig: gitconfig
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.gemrc: gemrc
+    ~/.gitconfig: gitconfig
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules...]
