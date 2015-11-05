@@ -41,7 +41,7 @@ set backspace=2
 " Show trailing and preceeding whitespace, show tabs
 set list
 set listchars=""
-set listchars=tab:\|\ 
+set listchars=tab:\|\
 set listchars+=trail:.
 set listchars+=extends:>
 set listchars+=precedes:<
@@ -94,7 +94,9 @@ let g:airline_powerline_fonts = 1
 " Always use the system clibpoard
 " set clipboard=unnamed
 
-" ashghajsghjsagjagjsdgsdajghsadjhgdasjgjhsajhgsjgjsagdsjgdjasggdasjgjsagsadjgjsahgjhagsjasdgj
+" Enable true color mode
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
 " Color columns after 80
 set colorcolumn=80
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929

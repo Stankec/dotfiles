@@ -21,6 +21,7 @@ Plugin 'gmarik/Vundle.vim'               " vundle itself
 Plugin 'kien/ctrlp.vim'                  " fuzzy file finder
 Plugin 'ddollar/nerdcommenter'           " easy comments
 Plugin 'scrooloose/nerdtree'             " filetree
+Plugin 'Xuyuanp/nerdtree-git-plugin'     " Git integration with Nerdtree
 Plugin 'garbas/vim-snipmate'             " Textmate-like snippets
 Plugin 'honza/vim-snippets'              " dependency
 Plugin 'MarcWeber/vim-addon-mw-utils'    " dependency
@@ -45,6 +46,8 @@ Plugin 'airblade/vim-gitgutter'          " Git diff in gutter
 Plugin 'szw/vim-tags'                    " CTags integration
 Plugin 'benekastah/neomake'              " Neomake asynchronos tasks
 Plugin 'bling/vim-airline'               " Status bar improvemet
+Plugin 'rking/ag.vim'                    " Search
+Plugin 'cakebaker/scss-syntax.vim'       " SCSS syntax
 call vundle#end()                        " required
 
 filetype plugin indent on             " required
@@ -52,7 +55,7 @@ filetype plugin indent on             " required
 " Source configuration
 source ~/.vim/settings.vim
 source ~/.vim/mappings.vim
-
+source ~/.vim/hooks.vim
 " Use AG instead of grep for ctrl-p
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 

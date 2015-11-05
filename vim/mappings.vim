@@ -29,6 +29,9 @@ nmap <S-j> ]e
 " Toggle Git blame
 nmap <C-b> :Gblame<cr>
 
+" Deselect
+nnoremap <F3> :set hlsearch!<CR>
+
 " Move between splits w/ C-hjkl
 if exists('$TMUX')
   nnoremap  <silent> <C-h> :TmuxNavigateLeft<CR>
