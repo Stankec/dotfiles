@@ -29,6 +29,9 @@ nmap <S-j> ]e
 " Toggle Git blame
 nmap <C-b> :Gblame<cr>
 
+" Open FZF
+nmap <C-p> :FZF<cr>
+
 " Deselect
 nnoremap <F3> :set hlsearch!<CR>
 

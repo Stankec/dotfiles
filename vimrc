@@ -18,7 +18,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'               " vundle itself
-Plugin 'kien/ctrlp.vim'                  " fuzzy file finder
+" Plugin 'kien/ctrlp.vim'                  " fuzzy file finder
+Plugin 'junegunn/fzf'                    " fuzzy file finder
 Plugin 'ddollar/nerdcommenter'           " easy comments
 Plugin 'scrooloose/nerdtree'             " filetree
 Plugin 'Xuyuanp/nerdtree-git-plugin'     " Git integration with Nerdtree
@@ -48,6 +49,8 @@ Plugin 'benekastah/neomake'              " Neomake asynchronos tasks
 Plugin 'bling/vim-airline'               " Status bar improvemet
 Plugin 'rking/ag.vim'                    " Search
 Plugin 'cakebaker/scss-syntax.vim'       " SCSS syntax
+Plugin 'rust-lang/rust.vim'              " Rust lang support
+Plugin 'suan/vim-instant-markdown'       " Markdown preview
 call vundle#end()                        " required
 
 filetype plugin indent on             " required
@@ -67,3 +70,5 @@ let g:ctrlp_mruf_relative = 1
 
 " Check syntax w/ syntastic on file open
 let g:syntastic_check_on_open = 1
+
+
