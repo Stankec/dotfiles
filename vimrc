@@ -18,7 +18,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'               " vundle itself
-" Plugin 'kien/ctrlp.vim'                  " fuzzy file finder
 Plugin 'junegunn/fzf'                    " fuzzy file finder
 Plugin 'ddollar/nerdcommenter'           " easy comments
 Plugin 'scrooloose/nerdtree'             " filetree
@@ -51,6 +50,8 @@ Plugin 'rking/ag.vim'                    " Search
 Plugin 'cakebaker/scss-syntax.vim'       " SCSS syntax
 Plugin 'rust-lang/rust.vim'              " Rust lang support
 Plugin 'suan/vim-instant-markdown'       " Markdown preview
+Plugin 'asux/vim-capybara'               " Capybara integration
+Plugin 'thoughtbot/vim-rspec'            " VIM Rspec integration
 call vundle#end()                        " required
 
 filetype plugin indent on             " required
