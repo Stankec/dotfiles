@@ -84,6 +84,7 @@ export PATH="/usr/local/heroku/bin:/usr/local/bin:/Users/Stanko/.rbenv/shims:/Us
 eval $(/usr/local/Cellar/gpg-agent/2.0.29/bin/gpg-agent --daemon --no-grab --write-env-file $HOME/.gpg-agent-info)
 export GPG_TTY=$(tty)
 export GPG_AGENT_INFO
+# eval "$(ssh-agent -s)"
 
 # if pgrep "gpg-agent" > /dev/null; then
 # else

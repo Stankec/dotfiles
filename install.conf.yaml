@@ -9,6 +9,7 @@
     ~/.gitconfig: gitconfig
     ~/.tmux: tmux/
     ~/.tmux.conf: tmux.conf
+    ~/.rubocop.yml: rubocop.yml
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules...]
