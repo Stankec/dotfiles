@@ -52,6 +52,7 @@ Plugin 'rust-lang/rust.vim'              " Rust lang support
 Plugin 'suan/vim-instant-markdown'       " Markdown preview
 Plugin 'asux/vim-capybara'               " Capybara integration
 Plugin 'thoughtbot/vim-rspec'            " VIM Rspec integration
+Plugin 'chiel92/vim-autoformat'          " Automatically format code
 call vundle#end()                        " required
 
 filetype plugin indent on             " required

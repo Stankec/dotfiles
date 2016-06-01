@@ -35,6 +35,9 @@ nmap <C-p> :FZF<cr>
 " Deselect
 nnoremap <F3> :set hlsearch!<CR>
 
+" Prettify code
+noremap <F4> :Autoformat<CR>
+
 " Move between splits w/ C-hjkl
 if exists('$TMUX')
   nnoremap  <silent> <C-h> :TmuxNavigateLeft<CR>
