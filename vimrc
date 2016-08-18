@@ -26,7 +26,7 @@ Plugin 'garbas/vim-snipmate'             " Textmate-like snippets
 Plugin 'honza/vim-snippets'              " dependency
 Plugin 'MarcWeber/vim-addon-mw-utils'    " dependency
 Plugin 'tomtom/tlib_vim'                 " dependency
-Plugin 'scrooloose/syntastic'            " syntax checker
+" Plugin 'scrooloose/syntastic'            " syntax checker
 Plugin 'vim-ruby/vim-ruby'               " ruby config
 Plugin 'tpope/vim-endwise'               " autocomplete end
 Plugin 'tpope/vim-rails'                 " rails
@@ -71,6 +71,6 @@ let g:ctrlp_use_caching = 0
 let g:ctrlp_mruf_relative = 1
 
 " Check syntax w/ syntastic on file open
-let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_open = 1
 
 

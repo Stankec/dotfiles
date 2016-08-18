@@ -79,14 +79,14 @@ let NERDTreeShowHidden=1
 let g:vim_tags_main_file = '.tags'
 
 " Syntastic
-let g:syntastic_ruby_checkers = ['mri', 'rubocop']
-let g:syntastic_ruby_rubocop_args = "-D -R"
+" let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+" let g:syntastic_ruby_rubocop_args = "-D -R"
 
 " Neomake
 " let g:neomake_ruby_rubocop_maker = {
 "       \ 'args': '-D -R'
 "       \}
-" autocmd! BufWritePost *.rb Neomake
+autocmd! BufEnter,BufWritePost * Neomake
 
 " Airline
 let g:airline_powerline_fonts = 1

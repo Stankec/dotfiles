@@ -101,7 +101,7 @@ export GPG_AGENT_INFO
 # fi
 
 # Docker
-eval "$(docker-machine env default)"
+# eval "$(docker-machine env default)"
 
 # Work
 . "${HOME}/.infinumrc"
