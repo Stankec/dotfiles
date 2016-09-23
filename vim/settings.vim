@@ -7,6 +7,7 @@ syntax on
 " Set 256 color and colorscheme
 set t_Co=256
 colorscheme molokai
+" colorscheme dracula
 
 " Set encoding
 " set encoding=utf-8
@@ -101,3 +102,6 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set colorcolumn=80
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%80v.\+/
+
+" Disable folding for large files
+let g:ruby_fold_lines_limit = 300

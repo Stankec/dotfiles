@@ -53,6 +53,10 @@ Plugin 'suan/vim-instant-markdown'       " Markdown preview
 Plugin 'asux/vim-capybara'               " Capybara integration
 Plugin 'thoughtbot/vim-rspec'            " VIM Rspec integration
 Plugin 'chiel92/vim-autoformat'          " Automatically format code
+Plugin 'nelstrom/vim-markdown-folding'   " Folding for Markdown files
+Plugin 'vim-utils/vim-ruby-fold'         " Folding for Ruby files
+Plugin 'dracula/vim'                     " Dracula Vim theme
+Plugin 'tpope/vim-bundler'               " Vim goodies for Bundler
 call vundle#end()                        " required
 
 filetype plugin indent on             " required
@@ -61,6 +65,13 @@ filetype plugin indent on             " required
 source ~/.vim/settings.vim
 source ~/.vim/mappings.vim
 source ~/.vim/hooks.vim
+
+" Enable folding expressions
+set nocompatible
+if has("autocmd")
+  filetype plugin indent on
+endif
+
 " Use AG instead of grep for ctrl-p
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 

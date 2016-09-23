@@ -6,7 +6,6 @@ AllCops:
     - db/**
     - config/**
     - script/**
+  TargetRubyVersion: 2.3
 Documentation:
   Enabled: false
-Metrics/AbcSize:
-    Enabled: false

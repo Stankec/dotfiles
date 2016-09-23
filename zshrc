@@ -11,8 +11,9 @@ export VISUAL=$EDITOR
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="bira"
-ZSH_THEME="bullet-train"
+# ZSH_THEME="bullet-train"
 # ZSH_THEME="agnoster"
+ZSH_THEME="dracula"
 
 # Sources
 # source ~/.bin/tmuxinator.zsh
@@ -100,6 +101,10 @@ export GPG_AGENT_INFO
 #   fi
 # fi
 
+# Rust
+source $HOME/.cargo/env
+
+
 # Docker
 # eval "$(docker-machine env default)"
 
@@ -121,6 +126,7 @@ alias ll="ls -alGh"
 alias update-rbenv="git -C ~/.rbenv pull; git -C ~/.rbenv/plugins/ruby-build pull"
 alias vim="nvim"
 alias gpg="gpg2"
+alias dcp="docker-compose"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
