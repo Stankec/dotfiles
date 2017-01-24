@@ -1,0 +1,7 @@
+LOCATION="Zagreb"
+
+if [ "$#" -gt 0 ]; then
+  LOCATION="$@"
+fi
+
+curl "wttr.in/$LOCATION"
