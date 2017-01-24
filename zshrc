@@ -14,6 +14,7 @@ export VISUAL=$EDITOR
 # ZSH_THEME="bullet-train"
 # ZSH_THEME="agnoster"
 ZSH_THEME="dracula"
+# ZSH_THEME="half-life"
 
 # Sources
 # source ~/.bin/tmuxinator.zsh
@@ -127,6 +128,7 @@ alias update-rbenv="git -C ~/.rbenv pull; git -C ~/.rbenv/plugins/ruby-build pul
 alias vim="nvim"
 alias gpg="gpg2"
 alias dcp="docker-compose"
+alias docker-clean="curl https://gist.githubusercontent.com/Stankec/d2c801d193ce48224ae052b49ba60856/raw/clean_docker.sh | bash"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
