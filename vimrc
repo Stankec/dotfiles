@@ -46,7 +46,7 @@ Plugin 'airblade/vim-gitgutter'          " Git diff in gutter
 Plugin 'szw/vim-tags'                    " CTags integration
 Plugin 'benekastah/neomake'              " Neomake asynchronos tasks
 Plugin 'bling/vim-airline'               " Status bar improvemet
-Plugin 'rking/ag.vim'                    " Search
+Plugin 'mileszs/ack.vim'                 " Search
 Plugin 'cakebaker/scss-syntax.vim'       " SCSS syntax
 Plugin 'rust-lang/rust.vim'              " Rust lang support
 Plugin 'suan/vim-instant-markdown'       " Markdown preview
@@ -73,6 +73,9 @@ if has("autocmd")
 endif
 
 " Use AG instead of grep for ctrl-p
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 " Don't use cache with ctrl-p
