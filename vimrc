@@ -1,4 +1,4 @@
-	"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " This is the main vimrc file, keep only plugin-related
 " configurations here. If plugin configuration consists of
 " more than a couple of lines, move it into separate file.
@@ -57,6 +57,12 @@ Plugin 'nelstrom/vim-markdown-folding'   " Folding for Markdown files
 Plugin 'vim-utils/vim-ruby-fold'         " Folding for Ruby files
 Plugin 'dracula/vim'                     " Dracula Vim theme
 Plugin 'tpope/vim-bundler'               " Vim goodies for Bundler
+" Plugin 'craigemery/vim-autotag'          " automatic CTag generation
+Plugin 'hwartig/vim-seeing-is-believing' " Inline code execution
+" Plugin 'xolox/vim-misc'                  " Utility for autoloading
+" Plugin 'xolox/vim-easytags'              " Autimatically create ctags
+Plugin 'paredit.vim'                     " Structiural editing of Lisb S expressions
+Plugin 'luochen1990/rainbow'             " Color parenthesis for easyer visual matching
 call vundle#end()                        " required
 
 filetype plugin indent on             " required
@@ -86,5 +92,3 @@ let g:ctrlp_mruf_relative = 1
 
 " Check syntax w/ syntastic on file open
 " let g:syntastic_check_on_open = 1
-
-

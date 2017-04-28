@@ -10,6 +10,8 @@
     ~/.tmux: tmux/
     ~/.tmux.conf: tmux.conf
     ~/.rubocop.yml: rubocop.yml
+    ~/.config/nvim: vim/
+    ~/.config/nvim/init.vim: nvimrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules...]

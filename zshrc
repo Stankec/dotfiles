@@ -57,7 +57,7 @@ ZSH_THEME="dracula"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow battery brew npm rbenv postgres z zsh-syntax-highlighting codeclimate)
+plugins=(git git-flow brew npm rbenv z zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,10 +83,9 @@ export PATH="/usr/local/heroku/bin:/usr/local/bin:/Users/Stanko/.rbenv/shims:/Us
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # GPG
-eval $(/usr/local/Cellar/gpg-agent/2.0.29/bin/gpg-agent --daemon --no-grab --write-env-file $HOME/.gpg-agent-info)
+# eval $(/usr/local/Cellar/gpg-agent/2.0.29/bin/gpg-agent --daemon --no-grab --write-env-file $HOME/.gpg-agent-info)
 export GPG_TTY=$(tty)
 export GPG_AGENT_INFO
-# eval "$(ssh-agent -s)"
 
 # if pgrep "gpg-agent" > /dev/null; then
 # else
@@ -105,12 +104,8 @@ export GPG_AGENT_INFO
 # Rust
 source $HOME/.cargo/env
 
-
-# Docker
-# eval "$(docker-machine env default)"
-
 # Work
-. "${HOME}/.infinumrc"
+# . "${HOME}/.floatingpointrc"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -127,7 +122,6 @@ alias ll="ls -alGh"
 alias update-rbenv="git -C ~/.rbenv pull; git -C ~/.rbenv/plugins/ruby-build pull"
 alias vim="nvim"
 alias gpg="gpg2"
-alias dcp="docker-compose"
 alias docker-clean="curl https://gist.githubusercontent.com/Stankec/d2c801d193ce48224ae052b49ba60856/raw/clean_docker.sh | bash"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -144,3 +138,6 @@ stty ek
 
 bindkey "^?" backward-delete-char
 bindkey "^[[3~" delete-char
+
+export NVM_DIR="/Users/Stanko/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

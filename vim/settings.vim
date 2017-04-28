@@ -5,9 +5,12 @@ let mapleader = "\<Space>"
 syntax on
 
 " Set 256 color and colorscheme
-set t_Co=256
-colorscheme molokai
-" colorscheme dracula
+" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" set t_Co=256
+" set termguicolors
+
+" colorscheme molokai
+colorscheme dracula
 
 " Set encoding
 " set encoding=utf-8
@@ -77,7 +80,7 @@ set splitright
 let NERDTreeShowHidden=1
 
 " Configure Vim-CTags
-let g:vim_tags_main_file = '.tags'
+" let g:vim_tags_main_file = '.tags'
 
 " Syntastic
 " let g:syntastic_ruby_checkers = ['mri', 'rubocop']
@@ -87,7 +90,9 @@ let g:vim_tags_main_file = '.tags'
 " let g:neomake_ruby_rubocop_maker = {
 "       \ 'args': '-D -R'
 "       \}
-autocmd! BufEnter,BufWritePost * Neomake
+" autocmd BufEnter,BufWritePost * NeomakeSh! ctags -R
+autocmd BufEnter,BufWritePost * Neomake
+" autocmd! BufEnter,BufWritePost * Neomake! clippy
 
 " Airline
 let g:airline_powerline_fonts = 1
@@ -105,3 +110,9 @@ match OverLength /\%80v.\+/
 
 " Disable folding for large files
 let g:ruby_fold_lines_limit = 300
+
+" Disable hilighting of indexed ctags
+let b:easytags_auto_highlight = 0
+
+" Enable parenthasis highlighting
+let g:rainbow_active = 1
