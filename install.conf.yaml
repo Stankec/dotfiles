@@ -3,15 +3,16 @@
 - link:
     ~/.zshrc: zshrc
     ~/.zsh_profile: zsh_profile
-    ~/.vim: vim/
-    ~/.vimrc: nvimrc
     ~/.gemrc: gemrc
     ~/.gitconfig: gitconfig
     ~/.tmux: tmux/
     ~/.tmux.conf: tmux.conf
     ~/.rubocop.yml: rubocop.yml
     ~/.config/nvim: vim/
-    ~/.config/nvim/init.vim: nvimrc
+    ~/.config/nvim/init.vim: vimrc
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.gnupg/gpg.conf: gnupg/gpg.conf
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules...]
