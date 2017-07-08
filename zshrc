@@ -57,13 +57,13 @@ ZSH_THEME="dracula"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow brew npm rbenv z zsh-syntax-highlighting)
+plugins=(git brew osx npm rbenv z zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/heroku/bin:/usr/local/bin:/Users/Stanko/.rbenv/shims:/Users/Stanko/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin"
+export PATH="$PATH:$HOME/.local/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -114,7 +114,7 @@ source $HOME/.cargo/env
 #
 alias zshconfig="$EDITOR ~/.zshrc"
 alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
-alias nvimrc="$EDITOR ~/.nvimrc"
+alias nvimrc="$EDITOR ~/.vimrc"
 alias tmuxconf="$EDITOR ~/.tmux.conf"
 alias jsc=/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc
 alias be="bundle exec"
@@ -139,5 +139,5 @@ stty ek
 bindkey "^?" backward-delete-char
 bindkey "^[[3~" delete-char
 
-export NVM_DIR="/Users/Stanko/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# added by travis gem
+[ -f /Users/stanko/.travis/travis.sh ] && source /Users/stanko/.travis/travis.sh
