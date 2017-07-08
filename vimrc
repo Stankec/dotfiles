@@ -35,7 +35,7 @@ Plugin 'tpope/vim-repeat'                " Enables dot command repeating for vim
 Plugin 'ap/vim-css-color'                " adds color to hex colors in CSS
 Plugin 'mkitt/tabline.vim'               " tab improvements
 Plugin 'sheerun/vim-polyglot'            " Add highlighting and indentation support for over 50 languages
-Plugin 'jiangmiao/auto-pairs'            " autoclose brackets
+" Plugin 'jiangmiao/auto-pairs'            " autoclose brackets
 Plugin 'tpope/vim-surround'              " surround objects with brackets
 Plugin 'flazz/vim-colorschemes'          " color schemes
 Plugin 'christoomey/vim-tmux-navigator'  " Navigate between TMUX and VIM semelessly
