@@ -7,7 +7,7 @@ syntax on
 " Set 256 color and colorscheme
 " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " set t_Co=256
-" set termguicolors
+set termguicolors
 
 " colorscheme molokai
 colorscheme dracula
@@ -93,6 +93,10 @@ let NERDTreeShowHidden=1
 " autocmd BufEnter,BufWritePost * NeomakeSh! ctags -R
 autocmd BufEnter,BufWritePost * Neomake
 " autocmd! BufEnter,BufWritePost * Neomake! clippy
+
+
+" Check spelling in Markdown files
+" autocmd BufRead,BufNewFile *.md setlocal spell
 
 " Airline
 let g:airline_powerline_fonts = 1

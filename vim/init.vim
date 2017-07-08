@@ -1,0 +1,1 @@
+/Users/stanko/.dotfiles/vimrc
