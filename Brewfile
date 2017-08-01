@@ -1,0 +1,13 @@
+tap "homebrew/bundle"
+tap "homebrew/core"
+brew "fzf"
+brew "openssl"
+brew "neovim"
+brew "oath-toolkit"
+brew "pass"
+brew "reattach-to-user-namespace"
+brew "the_silver_searcher"
+brew "tmux"
+brew "zsh", args: ["with-texi2html", "with-unicode9"]
+brew "zsh-completions"
+brew "zsh-syntax-highlighting"
