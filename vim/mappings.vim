@@ -42,8 +42,8 @@ noremap <F4> :Autoformat<CR>
 augroup seeingIsBelievingSettings
   autocmd!
 
-  autocmd FileType ruby nmap <buffer> <Enter> <Plug>(seeing-is-believing-mark-and-run)
-  autocmd FileType ruby xmap <buffer> <Enter> <Plug>(seeing-is-believing-mark-and-run)
+  autocmd FileType ruby nmap <buffer> <F6> <Plug>(seeing-is-believing-mark-and-run)
+  autocmd FileType ruby xmap <buffer> <F6> <Plug>(seeing-is-believing-mark-and-run)
 
   autocmd FileType ruby nmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
   autocmd FileType ruby xmap <buffer> <F4> <Plug>(seeing-is-believing-mark)

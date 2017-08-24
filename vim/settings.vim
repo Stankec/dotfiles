@@ -96,7 +96,7 @@ autocmd BufEnter,BufWritePost * Neomake
 
 
 " Check spelling in Markdown files
-" autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.md setlocal spell
 
 " Airline
 let g:airline_powerline_fonts = 1
@@ -120,3 +120,23 @@ let b:easytags_auto_highlight = 0
 
 " Enable parenthasis highlighting
 let g:rainbow_active = 1
+
+" Enable folding expressions
+if has("autocmd")
+  filetype plugin indent on
+endif
+
+" Use AG instead of grep for ctrl-p
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+" Don't use cache with ctrl-p
+let g:ctrlp_use_caching = 0
+
+" Only show MRU files relative to current file
+let g:ctrlp_mruf_relative = 1
+
+" Check syntax w/ syntastic on file open
+" let g:syntastic_check_on_open = 1

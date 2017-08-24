@@ -1,17 +1,3 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" This is the main vimrc file, keep only plugin-related
-" configurations here. If plugin configuration consists of
-" more than a couple of lines, move it into separate file.
-"
-" Organization:
-"    * ~/.vim/settings.vim            - settings
-"    * ~/.vim/mappings.vim            - mappings
-"    * ~/.vim/autocommands.vim        - auto commands
-"    * ~/.vim/local/<plugin_name>.vim - settings and mappings for
-"                                       specific plugin
-"
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 set nocompatible                      " We're running Vim, not Vi!
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -65,30 +51,7 @@ Plugin 'paredit.vim'                     " Structiural editing of Lisb S express
 Plugin 'luochen1990/rainbow'             " Color parenthesis for easyer visual matching
 call vundle#end()                        " required
 
-filetype plugin indent on             " required
-
 " Source configuration
 source ~/.vim/settings.vim
 source ~/.vim/mappings.vim
 source ~/.vim/hooks.vim
-
-" Enable folding expressions
-set nocompatible
-if has("autocmd")
-  filetype plugin indent on
-endif
-
-" Use AG instead of grep for ctrl-p
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-" Don't use cache with ctrl-p
-let g:ctrlp_use_caching = 0
-
-" Only show MRU files relative to current file
-let g:ctrlp_mruf_relative = 1
-
-" Check syntax w/ syntastic on file open
-" let g:syntastic_check_on_open = 1
