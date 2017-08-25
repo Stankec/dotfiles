@@ -44,6 +44,14 @@ bindkey "^[[3~" delete-char
 
 export GPG_TTY=$(tty)
 
+###############
+# COMPLETIONS #
+###############
+
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
+source ~/.rbenv/completions/rbenv.zsh
+
 ########
 # WORK #
 ########
@@ -64,11 +72,3 @@ alias ll="ls -alGh"
 alias vim="nvim"
 alias gpg="gpg2"
 alias docker-clean="curl https://gist.githubusercontent.com/Stankec/d2c801d193ce48224ae052b49ba60856/raw/clean_docker.sh | bash"
-
-###############
-# COMPLETIONS #
-###############
-
-fpath=(~/.zsh/completion $fpath)
-autoload -Uz compinit && compinit -i
-source ~/.rbenv/completions/rbenv.zsh
