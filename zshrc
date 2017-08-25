@@ -19,24 +19,35 @@ source $ZSH/oh-my-zsh.sh
 # USER CONFIGURATION #
 ######################
 
+# Enable UTF-8
 export LANG=en_US.UTF-8
+
+# Set default editor
 export EDITOR=nvim
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
+
+# Configure application lookup path
 export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH:$HOME/.local/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
+
+# Configure environment for use with Cargo and Rust
 source $HOME/.cargo/env
+
+# Enable FZF - Better Ctrl+R
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Fix integration with tmux and vim
 stty ixany
 stty ixoff -ixon
 stty stop undef
 stty start undef
 stty erase ^H
 stty ek
-
 bindkey "^?" backward-delete-char
 bindkey "^[[3~" delete-char
+
+# Extend manual pages lookup path
+# export MANPATH="/usr/local/man:$MANPATH"
 
 #######
 # GPG #
