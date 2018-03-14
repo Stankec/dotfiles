@@ -35,7 +35,8 @@ Plugin 'bling/vim-airline'               " Status bar improvemet
 Plugin 'mileszs/ack.vim'                 " Search
 Plugin 'cakebaker/scss-syntax.vim'       " SCSS syntax
 Plugin 'rust-lang/rust.vim'              " Rust lang support
-Plugin 'suan/vim-instant-markdown'       " Markdown preview
+" Plugin 'suan/vim-instant-markdown'       " Markdown preview
+Plugin 'euclio/vim-markdown-composer'    " Markdown preview
 Plugin 'asux/vim-capybara'               " Capybara integration
 Plugin 'thoughtbot/vim-rspec'            " VIM Rspec integration
 Plugin 'chiel92/vim-autoformat'          " Automatically format code
@@ -49,6 +50,9 @@ Plugin 'hwartig/vim-seeing-is-believing' " Inline code execution
 " Plugin 'xolox/vim-easytags'              " Autimatically create ctags
 Plugin 'paredit.vim'                     " Structiural editing of Lisb S expressions
 Plugin 'luochen1990/rainbow'             " Color parenthesis for easyer visual matching
+Plugin 'eslint/eslint'                   " JS linter
+Plugin 'brigade/scss-lint'               " SCSS linter
+Plugin 'jparise/vim-graphql'             " GraphQL syntax
 call vundle#end()                        " required
 
 " Source configuration

@@ -79,25 +79,6 @@ set splitright
 " NERDTree configuration
 let NERDTreeShowHidden=1
 
-" Configure Vim-CTags
-" let g:vim_tags_main_file = '.tags'
-
-" Syntastic
-" let g:syntastic_ruby_checkers = ['mri', 'rubocop']
-" let g:syntastic_ruby_rubocop_args = "-D -R"
-
-" Neomake
-" let g:neomake_ruby_rubocop_maker = {
-"       \ 'args': '-D -R'
-"       \}
-" autocmd BufEnter,BufWritePost * NeomakeSh! ctags -R
-autocmd BufEnter,BufWritePost * Neomake
-" autocmd! BufEnter,BufWritePost * Neomake! clippy
-
-
-" Check spelling in Markdown files
-autocmd BufRead,BufNewFile *.md setlocal spell
-
 " Airline
 let g:airline_powerline_fonts = 1
 
@@ -126,17 +107,14 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
-" Use AG instead of grep for ctrl-p
+" Use AG instead of grep for ctrl-p and Ack
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -u -g ""'
 
 " Don't use cache with ctrl-p
 let g:ctrlp_use_caching = 0
 
 " Only show MRU files relative to current file
 let g:ctrlp_mruf_relative = 1
-
-" Check syntax w/ syntastic on file open
-" let g:syntastic_check_on_open = 1

@@ -42,15 +42,15 @@ noremap <F4> :Autoformat<CR>
 augroup seeingIsBelievingSettings
   autocmd!
 
-  autocmd FileType ruby nmap <buffer> <F6> <Plug>(seeing-is-believing-mark-and-run)
-  autocmd FileType ruby xmap <buffer> <F6> <Plug>(seeing-is-believing-mark-and-run)
+  autocmd FileType ruby nmap <buffer> <F5> <Plug>(seeing-is-believing-mark-and-run)
+  autocmd FileType ruby xmap <buffer> <F5> <Plug>(seeing-is-believing-mark-and-run)
 
-  autocmd FileType ruby nmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
-  autocmd FileType ruby xmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
-  autocmd FileType ruby imap <buffer> <F4> <Plug>(seeing-is-believing-mark)
+  autocmd FileType ruby nmap <buffer> <F6> <Plug>(seeing-is-believing-mark)
+  autocmd FileType ruby xmap <buffer> <F6> <Plug>(seeing-is-believing-mark)
+  autocmd FileType ruby imap <buffer> <F6> <Plug>(seeing-is-believing-mark)
 
-  autocmd FileType ruby nmap <buffer> <F5> <Plug>(seeing-is-believing-run)
-  autocmd FileType ruby imap <buffer> <F5> <Plug>(seeing-is-believing-run)
+  autocmd FileType ruby nmap <buffer> <F7> <Plug>(seeing-is-believing-run)
+  autocmd FileType ruby imap <buffer> <F7> <Plug>(seeing-is-believing-run)
 augroup END
 
 " Move between splits w/ C-hjkl

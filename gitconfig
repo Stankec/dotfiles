@@ -1,10 +1,12 @@
+[init]
+  templatedir = ~/.git-templates
 [user]
 	name = Stanko Krtalić
 	email = stanko.krtalic@gmail.com
 	signingkey = 127A1EEE
 [core]
 	excludesfile = /Users/Stanko/.gitignore_global
-	editor = vim
+	editor = nvim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
@@ -16,7 +18,7 @@
 [push]
 	default = current
 [merge]
-	tool = vim
+	tool = nvim
 [gpg]
 	program = gpg2
 [commit]

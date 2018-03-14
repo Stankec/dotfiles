@@ -26,9 +26,16 @@ export LANG=en_US.UTF-8
 export EDITOR=nvim
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
+export BROWSER=/Applications/FirefoxDeveloperEdition.app/Contents/MacOS/firefox
+
+# Load secret ENV variables
+. /Users/stanko/.env_secrets
 
 # Configure application lookup path
 export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH:$HOME/.local/bin"
+test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+. /Users/stanko/kerl/20.1/activate
+source $HOME/.kiex/elixirs/elixir-1.5.2.env
 
 # Configure environment for use with Cargo and Rust
 source $HOME/.cargo/env
@@ -67,7 +74,7 @@ source ~/.rbenv/completions/rbenv.zsh
 # WORK #
 ########
 
-# source "${HOME}/.workrc"
+source "${HOME}/.workrc"
 
 ###########
 # ALIASES #
@@ -83,3 +90,4 @@ alias ll="ls -alGh"
 alias vim="nvim"
 alias gpg="gpg2"
 alias docker-clean="curl https://gist.githubusercontent.com/Stankec/d2c801d193ce48224ae052b49ba60856/raw/clean_docker.sh | bash"
+alias git-hours="docker run --rm -v \$PWD:/code ymajik/git-hours"
