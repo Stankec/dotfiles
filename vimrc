@@ -4,7 +4,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'               " vundle itself
-Plugin 'junegunn/fzf'                    " fuzzy file finder
+Plugin 'junegunn/fzf'                    " fuzzy file finder with Ctrl-p
+Plugin 'junegunn/fzf.vim'                " fuzzy file finder with Ctrl-p
 Plugin 'ddollar/nerdcommenter'           " easy comments
 Plugin 'scrooloose/nerdtree'             " filetree
 Plugin 'Xuyuanp/nerdtree-git-plugin'     " Git integration with Nerdtree
@@ -12,7 +13,6 @@ Plugin 'garbas/vim-snipmate'             " Textmate-like snippets
 Plugin 'honza/vim-snippets'              " dependency
 Plugin 'MarcWeber/vim-addon-mw-utils'    " dependency
 Plugin 'tomtom/tlib_vim'                 " dependency
-" Plugin 'scrooloose/syntastic'            " syntax checker
 Plugin 'vim-ruby/vim-ruby'               " ruby config
 Plugin 'tpope/vim-endwise'               " autocomplete end
 Plugin 'tpope/vim-rails'                 " rails
@@ -21,7 +21,6 @@ Plugin 'tpope/vim-repeat'                " Enables dot command repeating for vim
 Plugin 'ap/vim-css-color'                " adds color to hex colors in CSS
 Plugin 'mkitt/tabline.vim'               " tab improvements
 Plugin 'sheerun/vim-polyglot'            " Add highlighting and indentation support for over 50 languages
-" Plugin 'jiangmiao/auto-pairs'            " autoclose brackets
 Plugin 'tpope/vim-surround'              " surround objects with brackets
 Plugin 'flazz/vim-colorschemes'          " color schemes
 Plugin 'christoomey/vim-tmux-navigator'  " Navigate between TMUX and VIM semelessly

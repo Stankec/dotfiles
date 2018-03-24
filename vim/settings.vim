@@ -16,9 +16,8 @@ colorscheme dracula
 " set encoding=utf-8
 set termencoding=utf-8
 
-" Use ag instead of grep
-" Run brew install the_silver_searcher to install ag
-set grepprg=ag\ --nogroup\ --nocolor
+" Use rg instead of grep
+set grepprg=rg\ --color\ never\ --no-heading
 
 " Turn off swap files
 set noswapfile
@@ -96,9 +95,6 @@ match OverLength /\%80v.\+/
 " Disable folding for large files
 let g:ruby_fold_lines_limit = 300
 
-" Disable hilighting of indexed ctags
-let b:easytags_auto_highlight = 0
-
 " Enable parenthasis highlighting
 let g:rainbow_active = 1
 
@@ -107,14 +103,7 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
-" Use AG instead of grep for ctrl-p and Ack
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+" Use RG instead of grep for ctrl-p and Ack
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep'
 endif
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -u -g ""'
-
-" Don't use cache with ctrl-p
-let g:ctrlp_use_caching = 0
-
-" Only show MRU files relative to current file
-let g:ctrlp_mruf_relative = 1

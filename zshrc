@@ -41,6 +41,7 @@ source $HOME/.kiex/elixirs/elixir-1.5.2.env
 source $HOME/.cargo/env
 
 # Enable FZF - Better Ctrl+R
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Fix integration with tmux and vim
