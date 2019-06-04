@@ -1,11 +1,7 @@
 AllCops:
-  Includes:
-    - Rakefile
-    - config.ru
-  Excludes:
+  TargetRubyVersion: 2.6
+  Exclude:
     - db/**
     - config/**
-    - script/**
-  TargetRubyVersion: 2.4
-Documentation:
+Style/Documentation:
   Enabled: false

@@ -6,14 +6,27 @@ syntax on
 
 " Set 256 color and colorscheme
 " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-" set t_Co=256
+set t_Co=256
 set termguicolors
 
 " colorscheme molokai
-colorscheme dracula
+try
+    if !empty($VIM_COLOR)
+        colorscheme $VIM_COLOR
+    else
+        " Prefered default colorscheme
+        colorscheme dracula
+    endif
+catch /^Vim\%((\a\+)\)\=:E185/
+    " Colorschemes not installed yet
+    " This happens when first installing bundles
+    colorscheme default
+endtry
+" colorscheme dracula
+hi Normal guibg=NONE ctermbg=NONE
 
 " Set encoding
-" set encoding=utf-8
+set encoding=utf-8
 set termencoding=utf-8
 
 " Use rg instead of grep
@@ -36,7 +49,7 @@ set smarttab
 set number
 
 " Show relative line numbers
-" set relativenumber
+set relativenumber
 
 " Make backspace behave sane
 set backspace=2
@@ -77,9 +90,22 @@ set splitright
 
 " NERDTree configuration
 let NERDTreeShowHidden=1
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "*",
+    \ "Staged"    : "+",
+    \ "Untracked" : "+",
+    \ "Renamed"   : "→",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "-",
+    \ "Dirty"     : "x",
+    \ "Clean"     : "✓",
+    \ "Ignored"   : "_",
+    \ "Unknown"   : "?"
+    \ }
 
 " Airline
 let g:airline_powerline_fonts = 1
+let g:airline_theme='deus'
 
 " Always use the system clibpoard
 " set clipboard=unnamed
@@ -107,3 +133,25 @@ endif
 if executable('rg')
   let g:ackprg = 'rg --vimgrep'
 endif
+
+" Language Server configuration
+let g:LanguageClient_serverCommands = {
+  \ 'ruby': ['solargraph', 'stdio'],
+  \ 'rust': ['rustup', 'run', 'stable', 'rls'],
+  \ }
+" nnoremap <silent> T :call LanguageClient#textDocument_hover()<CR>
+" nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+" nnoremap <F2> :call LanguageClient#textDocument_rename()<CR>
+" nnoremap <localleader>lj :call LanguageClient_textDocument_definition()<CR>
+" nnoremap T :call LanguageClient_textDocument_hover()<CR>
+" timeout has to be bigger than time needed to index your project
+let g:LanguageClient_waitOutputTimeout = 1000
+let g:LanguageClient_autoStart=1
+let g:LanguageClient_autoStop=1
+
+" Markdown composer
+" let g:markdown_composer_syntax_theme = 'dracula'
+
+" NeoMake
+let g:neomake_ruby_enabled_makers = ['rubocop']
+

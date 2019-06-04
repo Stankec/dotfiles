@@ -1,26 +1,26 @@
 [init]
-  templatedir = ~/.git-templates
+  ; templatedir = ~/.git-templates
 [user]
-	name = Stanko Krtalić
-	email = stanko.krtalic@gmail.com
-	signingkey = 127A1EEE
+  name = Stanko K.R.
+  email = me@stanko.io
+  signingkey = 127A1EEE
 [core]
-	excludesfile = /Users/Stanko/.gitignore_global
-	editor = nvim
+  excludesfile = /Users/Stanko/.gitignore_global
+  editor = nvim
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [push]
-	default = current
+  default = current
 [merge]
-	tool = nvim
+  tool = nvim
 [gpg]
-	program = gpg2
+  program = gpg2
 [commit]
   gpgsign = true
 [pull]

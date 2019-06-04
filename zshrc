@@ -34,10 +34,8 @@ export BROWSER=/Applications/FirefoxDeveloperEdition.app/Contents/MacOS/firefox
 # Configure application lookup path
 export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH:$HOME/.local/bin"
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
-. /Users/stanko/kerl/20.1/activate
-source $HOME/.kiex/elixirs/elixir-1.5.2.env
-
-# Configure environment for use with Cargo and Rust
+. /Users/stanko/.kerl/installs/20.3/activate
+source $HOME/.kiex/elixirs/elixir-1.7.4.env
 source $HOME/.cargo/env
 
 # Enable FZF - Better Ctrl+R
@@ -57,6 +55,9 @@ bindkey "^[[3~" delete-char
 # Extend manual pages lookup path
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# Enable denv
+eval "$(denv hook ZSH)"
+
 #######
 # GPG #
 #######
@@ -69,6 +70,8 @@ export GPG_TTY=$(tty)
 
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
+
+# rbenv
 source ~/.rbenv/completions/rbenv.zsh
 
 ########
@@ -89,6 +92,9 @@ alias jsc=/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/R
 alias be="bundle exec"
 alias ll="ls -alGh"
 alias vim="nvim"
+alias mutt="neomutt"
 alias gpg="gpg2"
-alias docker-clean="curl https://gist.githubusercontent.com/Stankec/d2c801d193ce48224ae052b49ba60856/raw/clean_docker.sh | bash"
+alias docker-clean="curl https://gist.githubusercontent.com/monorkin/d2c801d193ce48224ae052b49ba60856/raw/clean_docker.sh | bash"
 alias git-hours="docker run --rm -v \$PWD:/code ymajik/git-hours"
+alias nfo="iconv -f cp437 -t utf8 *.nfo | less -Q"
+alias git-hub="hub"

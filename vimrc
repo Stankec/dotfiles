@@ -31,6 +31,7 @@ Plugin 'airblade/vim-gitgutter'          " Git diff in gutter
 Plugin 'szw/vim-tags'                    " CTags integration
 Plugin 'benekastah/neomake'              " Neomake asynchronos tasks
 Plugin 'bling/vim-airline'               " Status bar improvemet
+Plugin 'vim-airline/vim-airline-themes'  " Themes for the status bar
 Plugin 'mileszs/ack.vim'                 " Search
 Plugin 'cakebaker/scss-syntax.vim'       " SCSS syntax
 Plugin 'rust-lang/rust.vim'              " Rust lang support
@@ -52,6 +53,11 @@ Plugin 'luochen1990/rainbow'             " Color parenthesis for easyer visual m
 Plugin 'eslint/eslint'                   " JS linter
 Plugin 'brigade/scss-lint'               " SCSS linter
 Plugin 'jparise/vim-graphql'             " GraphQL syntax
+Plugin 'autozimu/LanguageClient-neovim'  " Language Server
+Plugin 'elmcast/elm-vim'                 " Elm language integration
+" Plugin 'ryanoasis/vim-devicons'          " File icons for languages
+Plugin 'ludovicchabant/vim-gutentags'    " CTag manager
+Plugin 'slashmili/alchemist.vim'         " Better Elixir integration
 call vundle#end()                        " required
 
 " Source configuration
