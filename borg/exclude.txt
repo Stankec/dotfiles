@@ -1,0 +1,6 @@
+# MacOS system stuff
+*/.DS_Store
+/Users/stanko/Library
+
+# Development dependencies
+*/node_modules

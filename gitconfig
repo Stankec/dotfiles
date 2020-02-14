@@ -39,6 +39,10 @@
   history = log -10 --format=format:'%Cgreen%h %Creset• %s (%cN, %ar)'
   branchout = checkout -b
   tags = tag
+  tagdates = !"git for-each-ref \
+        --sort=taggerdate \
+        --format '%(tag)_,,,_%(taggerdate:raw)_,,,_%(taggername)_,,,_%(subject)' refs/tags \
+        | gawk 'BEGIN { FS = \"_,,,_\"  } ; { t=strftime(\"%Y-%m-%d  %H:%M\",$2); printf \"%-20s %-18s %-25s %s\\n\", t, $1, $4, $3  }'"
   branches = branch -a
   stashes = stash list
   remotes = remote -v

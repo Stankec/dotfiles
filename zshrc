@@ -28,14 +28,15 @@ export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 export BROWSER=/Applications/FirefoxDeveloperEdition.app/Contents/MacOS/firefox
 
+# Configure version managers
+export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac --with-ssl=$(brew --prefix openssl)"
+
 # Load secret ENV variables
 . /Users/stanko/.env_secrets
 
 # Configure application lookup path
-export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH:$HOME/.local/bin"
-test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
-. /Users/stanko/.kerl/installs/20.3/activate
-source $HOME/.kiex/elixirs/elixir-1.7.4.env
+# export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH:$HOME/.local/bin"
+. $(brew --prefix asdf)/asdf.sh
 source $HOME/.cargo/env
 
 # Enable FZF - Better Ctrl+R
@@ -70,6 +71,9 @@ export GPG_TTY=$(tty)
 
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
+
+# asdf
+. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
 
 # rbenv
 source ~/.rbenv/completions/rbenv.zsh

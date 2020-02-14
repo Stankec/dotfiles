@@ -1,7 +1,9 @@
 AllCops:
-  TargetRubyVersion: 2.6
+  TargetRubyVersion: 2.7.0
   Exclude:
     - db/**
     - config/**
 Style/Documentation:
+  Enabled: false
+Naming/RescuedExceptionsVariableName:
   Enabled: false

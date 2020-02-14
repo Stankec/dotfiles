@@ -58,6 +58,8 @@ Plugin 'elmcast/elm-vim'                 " Elm language integration
 " Plugin 'ryanoasis/vim-devicons'          " File icons for languages
 Plugin 'ludovicchabant/vim-gutentags'    " CTag manager
 Plugin 'slashmili/alchemist.vim'         " Better Elixir integration
+Plugin 'posva/vim-vue'                   " Adds syntax hilighting for Vue
+Plugin 'b4b4r07/vim-hcl'                 " Hashicorp Configuration Lang support
 call vundle#end()                        " required
 
 " Source configuration
