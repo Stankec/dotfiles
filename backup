@@ -1,0 +1,7 @@
+borg create \
+  --stats \
+  --progress \
+  --compression lz4 \
+  --exclude-from ~/.dotfiles/borg/exclude.txt \
+  /Volumes/home/backup/stankos-macbook-pro-15-2017::backup$(date +%F%T | sed 's/[-:]//g') \
+  $HOME

@@ -14,6 +14,7 @@
     ~/.vimrc: vimrc
     ~/.config/ranger: ranger/
     ~/.gnupg/gpg.conf: gnupg/gpg.conf
+    ~/.config/borg/exclude.txt: borg/exclude.txt
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules...]
